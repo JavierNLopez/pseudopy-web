@@ -1,44 +1,80 @@
 # PseudoPy
 
-**PseudoPy** es una aplicación web académica desarrollada para traducir pseudocódigo en español a código Python. El proyecto integra análisis léxico, análisis sintáctico, análisis semántico, generación de código, visualización de tokens, árbol AST, consola de ejecución y una interfaz moderna inspirada en entornos de desarrollo como VS Code.
+**PseudoPy** es una aplicación web académica que traduce pseudocódigo en español a código Python. El proyecto integra conceptos fundamentales de compiladores, intérpretes y traductores, permitiendo visualizar el proceso de análisis léxico, sintáctico y semántico de un algoritmo escrito en pseudocódigo.
 
-El objetivo principal del proyecto es apoyar el aprendizaje de los fundamentos de compiladores, intérpretes y traductores mediante una herramienta visual, interactiva y fácil de utilizar.
+El sistema está diseñado como una herramienta educativa para apoyar el aprendizaje de programación, estructuras de control, análisis de lenguajes y generación de código.
 
 ---
 
-## Vista general del proyecto
+## Descripción general
 
-PseudoPy permite escribir pseudocódigo estructurado y convertirlo automáticamente a Python. Además de generar el código, la aplicación muestra el proceso interno de traducción mediante diferentes módulos de análisis.
+PseudoPy permite al usuario escribir pseudocódigo estructurado, analizarlo, traducirlo a Python y ejecutarlo directamente desde el navegador. Además, muestra diferentes componentes internos del proceso de traducción, como tokens, tabla de símbolos, traza de análisis, árbol AST visual, diagnóstico de errores y consola de ejecución.
 
-El sistema está diseñado para representar de forma clara las etapas principales de un traductor:
+El proyecto fue desarrollado como una aplicación web de una sola página usando **HTML, CSS y JavaScript**, integrando **Pyodide** para permitir la ejecución de código Python en el navegador sin necesidad de instalar Python localmente.
 
-1. Lectura del pseudocódigo.
+---
+
+## Objetivo del proyecto
+
+El objetivo principal de PseudoPy es demostrar, de forma visual e interactiva, cómo un programa escrito en pseudocódigo puede pasar por diferentes fases de análisis hasta convertirse en código Python ejecutable.
+
+El proyecto busca representar las etapas básicas de un traductor:
+
+1. Entrada de pseudocódigo.
 2. Análisis léxico.
-3. Análisis sintáctico.
-4. Análisis semántico.
-5. Generación de código Python.
-6. Ejecución guiada del programa.
-7. Visualización de resultados.
+3. Generación de tokens.
+4. Análisis sintáctico.
+5. Análisis semántico.
+6. Construcción de tabla de símbolos.
+7. Generación de código Python.
+8. Ejecución guiada.
+9. Visualización de resultados.
+
+---
+
+## Objetivo académico
+
+PseudoPy fue desarrollado con fines académicos para reforzar temas relacionados con:
+
+- Traductores de lenguaje.
+- Intérpretes.
+- Compiladores.
+- Análisis léxico.
+- Análisis sintáctico.
+- Análisis semántico.
+- Tabla de símbolos.
+- Generación de código.
+- Árboles de análisis.
+- Ejecución de programas.
+- Validación de errores.
+
+El sistema permite observar cómo una entrada escrita por el usuario se transforma progresivamente en un programa funcional en Python.
 
 ---
 
 ## Características principales
 
-- Editor de pseudocódigo con numeración de líneas.
+PseudoPy incluye las siguientes funcionalidades:
+
+- Editor de pseudocódigo con diseño tipo entorno de desarrollo.
+- Numeración de líneas.
 - Traducción de pseudocódigo en español a Python.
-- Validación de instrucciones y estructuras.
-- Subrayado visual de errores en el editor.
-- Tabla de tokens generados.
-- Análisis léxico con clasificación de lexemas.
-- Análisis sintáctico de bloques y estructuras.
-- Análisis semántico de variables, tipos y lecturas.
+- Análisis léxico.
+- Generación de tabla de tokens.
+- Clasificación de lexemas.
+- Análisis sintáctico de estructuras.
+- Detección de errores en bloques.
+- Análisis semántico de variables y tipos.
 - Tabla de símbolos.
 - Árbol AST visual.
+- Panel de inspección del proceso.
 - Consola de ejecución integrada.
+- Ejecución de código Python en navegador.
 - Entrada de datos mediante ventanas modales.
-- Ejemplos precargados de algoritmos.
-- Botón para copiar el código Python generado.
-- Descarga del código traducido en archivo `.py`.
+- Validación de entradas numéricas.
+- Ejemplos precargados.
+- Copia del código Python generado.
+- Descarga del código generado en archivo `.py`.
 - Sección de palabras reservadas de Python.
 - Interfaz responsiva para computadora y dispositivos móviles.
 
@@ -46,21 +82,28 @@ El sistema está diseñado para representar de forma clara las etapas principale
 
 ## Tecnologías utilizadas
 
-El proyecto fue desarrollado con tecnologías web básicas, sin necesidad de frameworks externos complejos.
+El proyecto utiliza tecnologías web estándar, lo que facilita su ejecución en cualquier navegador moderno.
 
-- HTML5
-- CSS3
-- JavaScript
-- Pyodide
-- Python ejecutado en navegador
-- GitHub Pages
+| Tecnología | Uso dentro del proyecto |
+|---|---|
+| HTML5 | Estructura principal de la aplicación |
+| CSS3 | Diseño visual, responsividad y estilo tipo editor |
+| JavaScript | Lógica del traductor, validaciones y ejecución |
+| Pyodide | Ejecución de Python dentro del navegador |
+| Python | Lenguaje de salida generado por el traductor |
+| GitHub Pages | Publicación del sitio web |
+| Git | Control de versiones |
+| GitHub | Repositorio y despliegue del proyecto |
 
 ---
 
-## Estructura del proyecto
+## Estructura del repositorio
+
+La estructura básica del proyecto es la siguiente:
 
 ```text
 pseudopy-web/
 │
 ├── index.html
-└── README.md
+├── README.md
+└── assets/
